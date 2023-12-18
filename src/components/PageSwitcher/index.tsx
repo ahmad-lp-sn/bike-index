@@ -3,7 +3,7 @@ import { useStyles } from "./styles"
 import { DataContext } from "../../providers"
 
 export const PageSwitcher = () => {
-    const { filter, lastPage = 1, isLoading, err, setFilter } = useContext(DataContext)
+    const { filter, lastPage = 1, err, setFilter } = useContext(DataContext)
     const classes = useStyles()
 
     const currentPage = filter?.page || 1

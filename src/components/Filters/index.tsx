@@ -11,7 +11,7 @@ export const Filters = () => {
     useEffect(() => {
         const timeOutId = setTimeout(() => { setFilter?.(filter => ({ ...filter, query })) }, 500)
         return () => clearTimeout(timeOutId);
-    }, [query]);
+    }, [query, setFilter]);
 
     return <div className={classes.card}>
         <div className={classes.container}>
